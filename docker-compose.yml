@@ -13,7 +13,6 @@ services:
 
   # APLICAÇÃO
   web:
-    #image: php:7.3-fpm
     build:
       .
     volumes:
