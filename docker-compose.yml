@@ -1,6 +1,6 @@
 version: "3" 
 services:
-  # Web service layer
+  # WEB SERVER
   nginx:
     image: nginx:1.13
     volumes:
@@ -11,7 +11,7 @@ services:
     links:
       - web 
 
-  # Application service layer
+  # APLICAÇÃO
   web:
     #image: php:7.3-fpm
     build:
@@ -23,7 +23,7 @@ services:
     links:
       - mysql
   
-  # Data persistence service layer
+  # BANCO DE DADOS
   mysql:
     image: mysql:5.6
     ports:
