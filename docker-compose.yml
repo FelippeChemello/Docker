@@ -13,7 +13,9 @@ services:
 
   # Application service layer
   web:
-    image: php:7.3-fpm
+    #image: php:7.3-fpm
+    build:
+      .
     volumes:
       - "./app:/var/www/html"
     ports:
