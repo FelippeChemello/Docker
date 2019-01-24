@@ -3,18 +3,17 @@
 
   echo "Teste KingHost";
 
-  $servername = "192.168.0.33:3306";
-  $database = "teste";
-  $username = "teste";
-  $password = "1234567";
-  // Create connection
-  $conn = mysqli_connect($servername, $username, $password, $database);
-  // Check connection
-  if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
-  }
-  echo "Connected successfully";
-  mysqli_close($conn);
+  $banco = "teste";
+  $usuario = "teste";
+  $senha = "1234567";
+  $hostname = "localhost:3306";
+  $conn = mysqli_connect($hostname,$usuario,$senha); mysqli_select_db($banco) or die( "Não foi possível conectar ao banco MySQL");
+  if (!$conn) {echo "Não foi possível conectar ao banco MySQL.
+  "; exit;}
+  else {echo "Parabéns!! A conexão ao banco de dados ocorreu normalmente!.
+  ";}
+  mysql_close(); 
+  
 
 
 ?>
